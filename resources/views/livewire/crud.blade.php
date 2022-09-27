@@ -1,5 +1,5 @@
 <x-slot name="header">
-    <h2 class="text-center">Laravel 9 Livewire CRUD Demo</h2>
+    <h2 class="text-center">Feira de Trocas</h2>
 </x-slot>
 <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
