@@ -61,9 +61,9 @@ class Produtos extends Component
     {
         $produto = Produto::findOrFail($id);
         $this->produto_id = $id;
-        $this->nome = $Produto->nome;
-        $this->descricao = $Produto->descricao;
-        $this->preco = $Produto->preco;
+        $this->nome = $produto->nome;
+        $this->descricao = $produto->descricao;
+        $this->preco = $produto->preco;
 
         $this->updateMode = true;
     }
