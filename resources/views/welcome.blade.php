@@ -11,7 +11,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Laravel Livewire CRUD Produtos</h2>
+                        <h2>Produtos</h2>
                     </div>
                     <div class="card-body">
                         @if (session()->has('message'))
