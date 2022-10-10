@@ -31,7 +31,7 @@
                 <td>{{ $produto->preco}}
                 <td>
                 <button wire:click="edit({{ $produto->id }})" class="btn btn-primary btn-sm">Edit</button>
-                    <button wire:click="delete({{ $produto->id }})" class="btn btn-danger btn-sm">Delete</button>
+                <button wire:click="delete({{ $produto->id }})" class="btn btn-danger btn-sm">Delete</button>
                 </td>
             </tr>
             @endforeach
