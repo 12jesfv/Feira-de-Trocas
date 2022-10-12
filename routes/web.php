@@ -18,7 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('categorias', Categoria::class);
+
+Route::get('/categorias', function () {
+    return view('categorias');
+});
+
+// Route::get('categorias', Categoria::class);
 
 Route::get('projetos', App\Http\Livewire\Projetos::class)
     ->name('projetos');

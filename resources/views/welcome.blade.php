@@ -11,6 +11,24 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
+                        <h2>Produtos</h2>
+                    </div>
+                    <div class="card-body">
+                        @if (session()->has('message'))
+                            <div class="alert alert-success">
+                                {{ session('message') }}
+                            </div>
+                        @endif
+                        @livewire('produtos')
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
                         <h2>Categorias</h2>
                     </div>
                     <div class="card-body">
@@ -24,6 +42,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     @livewireScripts
 </body>

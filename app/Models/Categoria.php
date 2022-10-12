@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
+
+    // Campos para o modelo Categoria
+
+    /*
+    @nome string
+    */
     protected $fillable = [
         'nome'
     ];
