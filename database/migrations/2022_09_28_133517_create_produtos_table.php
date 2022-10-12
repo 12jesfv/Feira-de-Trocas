@@ -18,7 +18,11 @@ class CreateProdutosTable extends Migration
            $table->string('nome', 100);
            $table->string('descricao');
            $table->decimal('preco');
+           $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
+           $table->string('categoria_nome', 100)->default('');;
            $table->timestamps();
+          // $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+
        });
      }
 

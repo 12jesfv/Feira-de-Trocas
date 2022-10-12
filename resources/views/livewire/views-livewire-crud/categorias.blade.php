@@ -17,6 +17,7 @@
             <tr>
                 <th>No.</th>
                 <th>Nome</th>
+                <th>Estado</th>
                 <th width="150px">Action</th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
             <tr>
                 <td>{{ $categoria->id }}</td>
                 <td>{{ $categoria->nome }}</td>
+                <td>{{ $categoria->estado }}</td>
                 <td>
                 <button wire:click="edit({{ $categoria->id }})" class="btn btn-primary btn-sm">Edit</button>
                 <button wire:click="delete({{ $categoria->id }})" class="btn btn-danger btn-sm">Delete</button>

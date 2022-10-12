@@ -19,6 +19,7 @@
                 <th>Nome</th>
                 <th>Descricao</th>
                 <th>Preco</th>
+                <th>Nome da categoria</th>
                 <th width="150px">Action</th>
             </tr>
         </thead>
@@ -28,7 +29,8 @@
                 <td>{{ $produto->id }}</td>
                 <td>{{ $produto->nome }}</td>
                 <td>{{ $produto->descricao }}</td>
-                <td>{{ $produto->preco}}
+                <td>{{ $produto->preco}}</td>
+                <td> {{ $produto->Categoria->nome}}</td>
                 <td>
                 <button wire:click="edit({{ $produto->id }})" class="btn btn-primary btn-sm">Edit</button>
                 <button wire:click="delete({{ $produto->id }})" class="btn btn-danger btn-sm">Delete</button>

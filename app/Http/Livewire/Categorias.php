@@ -7,7 +7,7 @@ use App\Models\Categoria;
 
 class Categorias extends Component
 {
-    public $categorias, $nome, $categoria_id;
+    public $categorias, $nome, $estado, $categoria_id;
     public $updateMode = false;
 
     /**
@@ -28,6 +28,7 @@ class Categorias extends Component
      */
     private function resetInputFields(){
         $this->nome = '';
+        $this->estado = '';
     }
 
     /**
@@ -39,6 +40,7 @@ class Categorias extends Component
     {
         $validatedDate = $this->validate([
             'nome' => 'required',
+            'estado' => 'required'
         ]);
 
         Categoria::create($validatedDate);
@@ -58,6 +60,7 @@ class Categorias extends Component
         $categoria = Categoria::findOrFail($id);
         $this->categoria_id = $id;
         $this->nome = $categoria->nome;
+        $this->estado = $categoria->estado;
 
         $this->updateMode = true;
     }
@@ -82,12 +85,14 @@ class Categorias extends Component
     {
         $validatedDate = $this->validate([
             'nome' => 'required',
+            'estado' => 'required'
             
         ]);
 
         $categoria = Categoria::find($this->categoria_id);
         $categoria->update([
             'nome' => $this->nome,
+            'estado' => $this->estado
         ]);
 
         $this->updateMode = false;

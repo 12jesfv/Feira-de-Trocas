@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Categorias;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('/categorias', function () {
-    return view('categorias');
+    return view('categorias_table');
 });
+
 
 // Route::get('categorias', Categoria::class);
 

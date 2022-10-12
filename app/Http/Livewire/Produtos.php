@@ -4,10 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Produto;
+use App\Models\Categoria;
 
 class Produtos extends Component
 {
-    public $produtos, $nome, $descricao, $preco, $produto_id;
+    public $produtos, $nome, $descricao, $preco, $produto_id, $categoria_id;
     public $updateMode = false;
 
     /**
@@ -30,6 +31,7 @@ class Produtos extends Component
         $this->nome = '';
         $this->descricao = '';
         $this->preco = '';
+        $this->categoria_id = '';
     }
 
     /**
@@ -43,6 +45,7 @@ class Produtos extends Component
             'nome' => 'required',
             'descricao' => 'required',
             'preco' => 'required',
+            'categoria_id' => 'required'
         ]);
 
         Produto::create($validatedDate);
@@ -64,6 +67,7 @@ class Produtos extends Component
         $this->nome = $produto->nome;
         $this->descricao = $produto->descricao;
         $this->preco = $produto->preco;
+        $this->categoria_id = $produto->categoria_id;
 
         $this->updateMode = true;
     }
@@ -89,7 +93,8 @@ class Produtos extends Component
         $validatedDate = $this->validate([
             'nome' => 'required',
             'descricao' => 'required',
-            'preco' => 'required'
+            'preco' => 'required',
+            'categoria_id' => 'required',
         ]);
 
         $produto = Produto::find($this->produto_id);
@@ -97,6 +102,7 @@ class Produtos extends Component
             'nome' => $this->nome,
             'descricao' => $this->descricao,
             'preco' => $this->preco,
+            'categoria_id' => $this->categoria_id,
         ]);
 
         $this->updateMode = false;

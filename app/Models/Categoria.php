@@ -14,7 +14,14 @@ class Categoria extends Model
     @nome string
     */
     protected $fillable = [
-        'nome'
+        'nome',
+        'estado'
     ];
+
+    
+    public function produtos(){
+        return this->hasMany(Produto::class); // categoria_id
+      }
+
     use HasFactory;
 }

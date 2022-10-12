@@ -19,13 +19,14 @@ class Produto extends Model
       protected $fillable = [
         'nome',
         'descricao',
-        'preco'
+        'preco',
+        'categoria_id'
     ];
 
-    // Relacao produtos categoria 1:N
+    // Relacao produtos categoria N:1
 
     public function categoria(){
-      return this->belongsTo(Categoria::class); // categoria_id
+      return $this->belongsTo(Categoria::class); // categoria_id
     }
 
     use HasFactory;
