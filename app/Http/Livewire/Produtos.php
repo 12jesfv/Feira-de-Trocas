@@ -5,10 +5,13 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Produto;
 use App\Models\Categoria;
-
+use Livewire\WithFileUploads;
+use App\Traits\ImageTrait;
 class Produtos extends Component
 {
-    public $produtos, $nome, $descricao, $preco, $produto_id, $categoria_id;
+    use WithFileUploads;
+    use ImageTrait;
+    public $produtos,$file, $nome, $descricao, $preco, $produto_id, $categorias, $categoria_id;
     public $updateMode = false;
 
     /**
@@ -19,6 +22,7 @@ class Produtos extends Component
     public function render()
     {
         $this->produtos = Produto::all();
+        $this->categorias = Categoria::all();
         return view('livewire.produtos');
     }
 
@@ -45,8 +49,12 @@ class Produtos extends Component
             'nome' => 'required',
             'descricao' => 'required',
             'preco' => 'required',
+            'file' => 'required',
             'categoria_id' => 'required'
         ]);
+        
+        $validatedData['file'] = $this->file->store('files', 'public');
+        // $this->verifyAndUpload($request, 'file', 'images');
 
         Produto::create($validatedDate);
 
