@@ -18,7 +18,22 @@
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
-
+            <div>
+                <x-jet-label for="ano" value="{{ __('Ano') }}" />
+                <x-jet-input id="ano" class="block mt-1 w-full" type="number" name="ano" :value="old('ano')" required autofocus autocomplete="ano" />
+            </div>
+            <div>
+                <x-jet-label for="turma" value="{{ __('Turma') }}" />
+                <x-jet-input id="turma" class="block mt-1 w-full" type="text" maxlength="1" name="turma" :value="old('turma')" required autofocus autocomplete="turma" />
+            </div>
+            <div>
+                <x-jet-label for="num_turma" value="{{ __('Num de Turma') }}" />
+                <x-jet-input id="num_turma" class="block mt-1 w-full" type="number" name="num_turma" :value="old('num_turma')" required autofocus autocomplete="num_turma" />
+            </div>
+            <div>
+                <x-jet-label for="cartao" value="{{ __('Num de Cartao') }}" />
+                <x-jet-input id="cartao" class="block mt-1 w-full" type="text" maxlength="5" name="cartao" :value="old('cartao')" required autofocus autocomplete="cartao" />
+            </div>
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />

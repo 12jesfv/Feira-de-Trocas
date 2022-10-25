@@ -18,6 +18,10 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->integer('ano');
+            $table->char('turma');
+            $table->integer('num_turma');
+            $table->integer('cartao');
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();

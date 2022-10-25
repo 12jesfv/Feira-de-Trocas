@@ -26,6 +26,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'ano',
+        'turma',
+        'num_turma',
+        'cartao',
         'password',
     ];
 
@@ -58,4 +62,7 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function entrega(){
+        return this->hasOne(Entrega::class);
+      }
 }

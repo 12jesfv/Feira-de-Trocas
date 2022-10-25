@@ -30,5 +30,9 @@ class Produto extends Model
       return $this->belongsTo(Categoria::class); // categoria_id
     }
 
+    public function entrega(){
+      return this->hasOne(Entrega::class);
+    }
+
     use HasFactory;
 }
