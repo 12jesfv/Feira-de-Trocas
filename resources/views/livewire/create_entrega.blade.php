@@ -18,6 +18,19 @@
        
     </div>
 
+    <div class="form-group">
+        <label for="exampleFormControlInput2">ID do user</label>
+        <textarea type="email" class="form-control" id="exampleFormControlInput2" wire:model="user_id" placeholder="id user"></textarea>
+        @error('body') <span class="text-danger">{{ $message }}</span>@enderror
+
+        <select>
+        @foreach($users as $user)
+            <option value="{{$user->id}}">{{ $user->name}}</option>
+        @endforeach
+        </select>
+       
+    </div>
+
 
     
 

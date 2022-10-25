@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Entrega;
 use App\Models\Produto;
-
+use App\Models\User;
 class Entregas extends Component
 {
 
@@ -21,6 +21,7 @@ class Entregas extends Component
     {
         $this->entregas = Entrega::all();
         $this->produtos = Produto::all();
+        $this->users = User::all();
         return view('livewire.entregas');
     }
 

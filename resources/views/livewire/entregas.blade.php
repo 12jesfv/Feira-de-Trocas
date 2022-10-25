@@ -17,7 +17,7 @@
             <tr>
                 <th>No.</th>
                 <th>Data de entrega</th>
-                <th>Utilizador</th>
+                <th>Cartao da escola</th>
                 <th>Produto</th>
                 <th width="150px">Action</th>
             </tr>
