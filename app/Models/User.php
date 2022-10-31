@@ -63,6 +63,6 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
     public function entrega(){
-        return this->hasOne(Entrega::class);
+        return $this->hasOne(Entrega::class);
       }
 }

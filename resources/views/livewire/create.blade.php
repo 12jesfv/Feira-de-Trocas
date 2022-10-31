@@ -23,10 +23,8 @@
     
     <div class="form-group">
         <label for="exampleFormControlInput2">ID da categoria</label>
-        <textarea type="email" class="form-control" id="exampleFormControlInput2" wire:model="categoria_id" placeholder="Enter Categoria ID"></textarea>
-        @error('body') <span class="text-danger">{{ $message }}</span>@enderror
 
-        <select>
+        <select wire:model="categoria_id">
         @foreach($categorias as $categoria)
             <option value="{{$categoria->id}}">{{ $categoria->nome}}</option>
         @endforeach

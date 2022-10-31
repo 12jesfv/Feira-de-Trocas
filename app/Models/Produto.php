@@ -27,7 +27,7 @@ class Produto extends Model
     // Relacao produtos categoria N:1
 
     public function categoria(){
-      return $this->belongsTo(Categoria::class); // categoria_id
+      return $this->belongsTo(Categoria::class);
     }
 
     public function entrega(){

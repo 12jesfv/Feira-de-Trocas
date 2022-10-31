@@ -18,9 +18,10 @@ class Categoria extends Model
         'estado'
     ];
 
+	// Relacao categoria produtos 1:N
     
     public function produtos(){
-        return this->hasMany(Produto::class); // categoria_id
+        return this->hasMany(Produto::class);
       }
 
     use HasFactory;

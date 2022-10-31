@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReservasTable extends Migration
+class CreateVouchersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateReservasTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservas', function (Blueprint $table) {
+        Schema::create('vouchers', function (Blueprint $table) {
             $table->id();
-            $table->date('data_reserva');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('produto_id')->constrained()->onDelete('cascade');
+            $table->date('data_entrega');
+            $table->integer('pontos');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateReservasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservas');
+        Schema::dropIfExists('vouchers');
     }
 }

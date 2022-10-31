@@ -1,7 +1,7 @@
 <form>
     <div class="form-group">
-        <label for="exampleFormControlInput1">Data de entrega</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Data Entrega" wire:model="data_entrega">
+        <label for="exampleFormControlInput1">Data de reserva</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Data Reserva" wire:model="data_reserva">
         @error('title') <span class="text-danger">{{ $message }}</span>@enderror
     </div>
 

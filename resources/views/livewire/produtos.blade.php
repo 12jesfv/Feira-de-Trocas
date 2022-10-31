@@ -20,6 +20,7 @@
                 <th>Descricao</th>
                 <th>Preco</th>
                 <th>Nome da categoria</th>
+                <th>Ficheiro</th>
                 <th width="150px">Action</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                 <td>{{ $produto->preco}}</td>
                 
                 <td> {{ $produto->Categoria->nome}}</td>
+                <td>{{ $produto->file}}</td>
                 
                 <td>
                 <button wire:click="edit({{ $produto->id }})" class="btn btn-primary btn-sm">Edit</button>

@@ -1,8 +1,8 @@
 <form>
     <input type="hidden" wire:model="post_id">
     <div class="form-group">
-        <label for="exampleFormControlInput1">Data Entrega:</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter data entrega" wire:model="data_entrega">
+        <label for="exampleFormControlInput1">Data Reserva:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter data Reserva" wire:model="data_entrega">
         @error('title') <span class="text-danger">{{ $message }}</span>@enderror
     </div>
     <div class="form-group">

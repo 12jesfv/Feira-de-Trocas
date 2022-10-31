@@ -14,13 +14,13 @@ class Entrega extends Model
     ];
     use HasFactory;
 
-    // Relacao produtos categoria N:1
+    
 
     public function produto(){
-        return $this->belongsTo(Produto::class); // categoria_id
+        return $this->belongsTo(Produto::class);
     }
 
     public function user(){
-        return $this->belongsTo(User::class); // categoria_id
+        return $this->belongsTo(User::class); 
     }
 }
